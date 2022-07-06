@@ -1,0 +1,4 @@
+BACKEND_URL = https:\/\/mobven.com\/dev
+BUNDLE_ID = com.mobven.ilaydaoner.Office-Tracker.dev
+APP_NAME = Office-Trackerdev
+SHOW_VERSION = YES
