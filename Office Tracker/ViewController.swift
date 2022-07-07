@@ -17,8 +17,7 @@ let showVersion = (Bundle.main.infoDictionary?["SHOW_VERSION"] as? String) == "Y
         if showVersion {
         } else {
     }
-print("first")
-    }
+}
     
 }
 

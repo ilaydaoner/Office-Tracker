@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19E3D1B82874C1AD005ED122"
-               BuildableName = "Office Tracker.app"
+               BuildableName = "Office-Tracker.app"
                BlueprintName = "Office Tracker"
                ReferencedContainer = "container:Office Tracker.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19E3D1B82874C1AD005ED122"
-            BuildableName = "Office Tracker.app"
+            BuildableName = "Office-Tracker.app"
             BlueprintName = "Office Tracker"
             ReferencedContainer = "container:Office Tracker.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19E3D1B82874C1AD005ED122"
-            BuildableName = "Office Tracker.app"
+            BuildableName = "Office-Tracker.app"
             BlueprintName = "Office Tracker"
             ReferencedContainer = "container:Office Tracker.xcodeproj">
          </BuildableReference>
