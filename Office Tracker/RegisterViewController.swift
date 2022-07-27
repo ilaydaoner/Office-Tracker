@@ -28,7 +28,7 @@ class RegisterViewController: UIViewController {
         firstnameLabel.textColor = UIColor(named: "purpletoDark")
         lastnameLabel.textColor = UIColor(named: "purpletoDark")
         emailLabel.textColor = UIColor(named: "purpletoDark")
-        passwordLabel.textColor = UIColor(named: "purpletodark")
+        passwordLabel.textColor = UIColor(named: "purpletoDark")
         createButton.backgroundColor = UIColor(named: "purpletoDark")
         
         
