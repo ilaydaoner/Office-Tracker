@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043BA49728917970000AA1DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BA49628917970000AA1DA /* RegisterViewController.swift */; };
+		043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BA4982891BD9E000AA1DA /* RegisterViewController.swift */; };
 		19E3D1BD2874C1AD005ED122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D1BC2874C1AD005ED122 /* AppDelegate.swift */; };
 		19E3D1BF2874C1AD005ED122 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */; };
 		19E3D1C12874C1AD005ED122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D1C02874C1AD005ED122 /* ViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043BA49628917970000AA1DA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		043BA4982891BD9E000AA1DA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		19E3D1B92874C1AD005ED122 /* Office-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E3D1BC2874C1AD005ED122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				19E3D1BC2874C1AD005ED122 /* AppDelegate.swift */,
 				19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */,
 				19E3D1C02874C1AD005ED122 /* ViewController.swift */,
-				043BA49628917970000AA1DA /* RegisterViewController.swift */,
+				043BA4982891BD9E000AA1DA /* RegisterViewController.swift */,
 				19E3D1C22874C1AD005ED122 /* Main.storyboard */,
 				19E3D1C82874C1B0005ED122 /* Assets.xcassets */,
 				19E3D1CA2874C1B0005ED122 /* LaunchScreen.storyboard */,
@@ -277,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E3D1C12874C1AD005ED122 /* ViewController.swift in Sources */,
-				043BA49728917970000AA1DA /* RegisterViewController.swift in Sources */,
+				043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */,
 				19E3D1BD2874C1AD005ED122 /* AppDelegate.swift in Sources */,
 				19E3D1C72874C1AD005ED122 /* Office_Tracker.xcdatamodeld in Sources */,
 				19E3D1BF2874C1AD005ED122 /* SceneDelegate.swift in Sources */,

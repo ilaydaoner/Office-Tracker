@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -114,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="904.61538461538453" y="67.535545023696685"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="dwF-dC-wjB">
             <objects>
-                <viewController id="ytb-iC-Jan" sceneMemberID="viewController">
+                <viewController id="ytb-iC-Jan" customClass="RegisterViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xpg-M8-b1b">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,6 +131,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="firstlabelField:" destination="nsk-7w-QWV" eventType="editingDidEnd" id="cBM-Ni-AhU"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Last Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-6g-L58">
                                 <rect key="frame" x="30" y="340" width="330" height="40"/>
@@ -149,14 +153,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-RB-nZw">
-                                <rect key="frame" x="30" y="570" width="330" height="60"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-RB-nZw">
+                                <rect key="frame" x="30" y="570" width="330" height="80"/>
+                                <color key="backgroundColor" name="purpletoDark"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="CREATE ACCOUNT">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createTap:" destination="ytb-iC-Jan" eventType="touchUpInside" id="nYY-1S-jjM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isj-xU-pGh">
                                 <rect key="frame" x="30" y="500" width="330" height="34"/>
@@ -175,14 +182,14 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euo-3x-k01">
-                                <rect key="frame" x="30" y="389" width="41" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euo-3x-k01">
+                                <rect key="frame" x="30" y="389" width="258" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfw-3Q-eiO">
-                                <rect key="frame" x="30" y="469" width="74" height="21"/>
+                                <rect key="frame" x="30" y="470" width="74" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
@@ -208,6 +215,7 @@
                             <constraint firstItem="3fW-h8-JkR" firstAttribute="top" secondItem="ubL-6g-L58" secondAttribute="bottom" constant="40" id="cAP-FH-EKt"/>
                             <constraint firstItem="35t-ct-oEF" firstAttribute="top" secondItem="E0a-Y7-ZFB" secondAttribute="bottom" constant="10" id="e2j-1F-MbJ"/>
                             <constraint firstItem="ubL-6g-L58" firstAttribute="leading" secondItem="cSa-ZM-1fR" secondAttribute="leading" constant="30" id="eYJ-7E-N14"/>
+                            <constraint firstItem="kfw-3Q-eiO" firstAttribute="top" secondItem="3fW-h8-JkR" secondAttribute="bottom" constant="10" id="eco-F6-tNK"/>
                             <constraint firstItem="kfw-3Q-eiO" firstAttribute="leading" secondItem="cSa-ZM-1fR" secondAttribute="leading" constant="30" id="h8i-ie-dwR"/>
                             <constraint firstItem="cSa-ZM-1fR" firstAttribute="trailing" secondItem="35t-ct-oEF" secondAttribute="trailing" constant="30" id="lOn-0B-Rvl"/>
                             <constraint firstItem="Xbz-RB-nZw" firstAttribute="leading" secondItem="cSa-ZM-1fR" secondAttribute="leading" constant="30" id="lhM-dW-d0J"/>
@@ -218,8 +226,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YV2-co-1FR"/>
+                    <connections>
+                        <outlet property="createButton" destination="Xbz-RB-nZw" id="Lfr-mt-l8U"/>
+                        <outlet property="emailField" destination="3fW-h8-JkR" id="Kh9-Uo-vRc"/>
+                        <outlet property="emailLabel" destination="euo-3x-k01" id="kgO-c5-y4c"/>
+                        <outlet property="firstnameField" destination="35t-ct-oEF" id="u8x-ca-3vm"/>
+                        <outlet property="firstnameLabel" destination="E0a-Y7-ZFB" id="2ee-Dp-IMe"/>
+                        <outlet property="lastnameField" destination="ubL-6g-L58" id="YbW-E8-fwZ"/>
+                        <outlet property="lastnameLabel" destination="x4h-Xh-Lng" id="7o5-nI-ETo"/>
+                        <outlet property="passwordField" destination="isj-xU-pGh" id="QrM-h1-8nM"/>
+                        <outlet property="passwordLabel" destination="kfw-3Q-eiO" id="5Hf-0p-IP5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys1-Od-fIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nsk-7w-QWV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1676.9230769230769" y="44.7867298578199"/>
         </scene>
@@ -248,6 +268,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="purpletoDark">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

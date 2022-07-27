@@ -9,13 +9,39 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var lastnameLabel: UILabel!
+    @IBOutlet weak var lastnameField: UITextField!
+    
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var firstnameField: UITextField!
+    
+    @IBOutlet weak var firstnameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createButton.layer.cornerRadius = 15
+        firstnameLabel.textColor = UIColor(named: "purpletoDark")
+        lastnameLabel.textColor = UIColor(named: "purpletoDark")
+        emailLabel.textColor = UIColor(named: "purpletoDark")
+        passwordLabel.textColor = UIColor(named: "purpletodark")
+        createButton.backgroundColor = UIColor(named: "purpletoDark")
+        
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func createTap(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
