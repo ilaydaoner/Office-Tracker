@@ -12,7 +12,7 @@
         <!--Sign In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-mY-6Ul">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-mY-6Ul">
                                 <rect key="frame" x="30" y="260" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HFj-Ge-cyp"/>
@@ -55,7 +55,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-g4-U1I">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-g4-U1I">
                                 <rect key="frame" x="30" y="370" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YxX-Yv-Io6"/>
@@ -123,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter First Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35t-ct-oEF">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35t-ct-oEF">
                                 <rect key="frame" x="30" y="260" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="enu-pi-gEt"/>
@@ -135,7 +135,7 @@
                                     <action selector="firstlabelField:" destination="nsk-7w-QWV" eventType="editingDidEnd" id="cBM-Ni-AhU"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Last Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-6g-L58">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-6g-L58">
                                 <rect key="frame" x="30" y="340" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="kKO-E5-qYw"/>
@@ -144,7 +144,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fW-h8-JkR">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fW-h8-JkR">
                                 <rect key="frame" x="30" y="420" width="330" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="A6q-6O-4dd"/>
@@ -156,6 +156,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-RB-nZw">
                                 <rect key="frame" x="30" y="612" width="330" height="38"/>
                                 <color key="backgroundColor" name="purpletoDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Zb8-n7-BdX"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="CREATE ACCOUNT">
@@ -165,7 +168,7 @@
                                     <action selector="createTap:" destination="ytb-iC-Jan" eventType="touchUpInside" id="nYY-1S-jjM"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isj-xU-pGh">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isj-xU-pGh">
                                 <rect key="frame" x="30" y="500" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -220,7 +223,6 @@
                             <constraint firstItem="kfw-3Q-eiO" firstAttribute="leading" secondItem="cSa-ZM-1fR" secondAttribute="leading" constant="30" id="h8i-ie-dwR"/>
                             <constraint firstItem="cSa-ZM-1fR" firstAttribute="trailing" secondItem="35t-ct-oEF" secondAttribute="trailing" constant="30" id="lOn-0B-Rvl"/>
                             <constraint firstItem="Xbz-RB-nZw" firstAttribute="leading" secondItem="cSa-ZM-1fR" secondAttribute="leading" constant="30" id="lhM-dW-d0J"/>
-                            <constraint firstItem="cSa-ZM-1fR" firstAttribute="bottom" secondItem="Xbz-RB-nZw" secondAttribute="bottom" constant="160" id="oY3-ZU-vtW"/>
                             <constraint firstItem="3fW-h8-JkR" firstAttribute="top" secondItem="euo-3x-k01" secondAttribute="bottom" constant="10" id="p2Z-bO-f7d"/>
                             <constraint firstItem="cSa-ZM-1fR" firstAttribute="trailing" secondItem="ubL-6g-L58" secondAttribute="trailing" constant="30" id="usw-yp-95R"/>
                         </constraints>
@@ -252,7 +254,7 @@
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemPurpleColor"/>
-                        <color key="barTintColor" systemColor="systemPurpleColor"/>
+                        <color key="barTintColor" name="purpletoDark"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" systemColor="systemPurpleColor"/>
                         </textAttributes>
@@ -267,9 +269,10 @@
             <point key="canvasLocation" x="-24.615384615384613" y="67.535545023696685"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="purpletoDark"/>
     <resources>
         <namedColor name="purpletoDark">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.71699999999999997" green="0.11" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

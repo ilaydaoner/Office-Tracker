@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
     
@@ -20,6 +20,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        let showVersion = (Bundle.main.infoDictionary?["SHOW_VERSION"] as? String) == "YES"
+                if showVersion {
+                } else {
+            }
+    }
+    private func setupUI() {
         signinButton.layer.cornerRadius = 15
         registerButton.layer.cornerRadius = 15
         emailLabel.textColor = UIColor(named: "purpletoDark")
@@ -29,16 +36,20 @@ class ViewController: UIViewController {
         passwordLabel.textColor = UIColor(named: "purpletoDark")
         signinButton.backgroundColor = UIColor(named: "purpletoDark")
         registerButton.backgroundColor = UIColor(named: "purpletoDark")
+        emailField.layer.borderColor = UIColor(named: "borderPrimeColor")?.cgColor
+        passwordField.layer.borderColor = UIColor(named: "borderPrimeColor")?.cgColor
+        emailField.layer.borderWidth = 1.3
+        passwordField.layer.borderWidth = 1.3
+       
         
+        
+    }
         
         
         // Do any additional setup after loading the view.
     
-let showVersion = (Bundle.main.infoDictionary?["SHOW_VERSION"] as? String) == "YES"
-        if showVersion {
-        } else {
-    }
-}
+
+
     
     @IBAction func signinTap(_ sender: UIButton) {
     }

@@ -24,14 +24,23 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var firstnameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    private func setupUI(){
         createButton.layer.cornerRadius = 15
         firstnameLabel.textColor = UIColor(named: "purpletoDark")
         lastnameLabel.textColor = UIColor(named: "purpletoDark")
         emailLabel.textColor = UIColor(named: "purpletoDark")
         passwordLabel.textColor = UIColor(named: "purpletoDark")
         createButton.backgroundColor = UIColor(named: "purpletoDark")
-        
-        
+        emailField.layer.borderColor = UIColor(named: "borderPrimeColor")?.cgColor
+        passwordField.layer.borderColor = UIColor(named: "borderPrimeColor")?.cgColor
+        firstnameField.layer.borderColor = UIColor(named: "borderPrimeColor")?.cgColor
+        lastnameField.layer.borderColor = UIColor(named: "borderPrimeColor")?.cgColor
+        emailField.layer.borderWidth = 1.3
+        passwordField.layer.borderWidth = 1.3
+        firstnameField.layer.borderWidth = 1.3
+        lastnameField.layer.borderWidth = 1.3
         
         
         
