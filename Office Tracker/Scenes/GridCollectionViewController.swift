@@ -46,7 +46,14 @@ class GridCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         print("Did tap coll at position: \(indexPath.row)")
+        let office = GridCollectionViewController.officesForCollection[indexPath.row]
+        let officeImage = Downloader.downloadImageWithURL(url: office.image ?? "")
+        let photosVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Photos") as! PhotosViewController
+        photosVC.selectedPhotos.image = officeImage
+        present(photosVC, animated: true, completion: nil)
     }
+    
+    
 
 
 }

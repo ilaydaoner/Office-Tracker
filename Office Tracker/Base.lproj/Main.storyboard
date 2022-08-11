@@ -449,9 +449,48 @@
             </objects>
             <point key="canvasLocation" x="3077" y="30"/>
         </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="OfX-WT-KFF">
+            <objects>
+                <viewController storyboardIdentifier="Photos" id="2PL-dK-ZVB" customClass="PhotosViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5uE-gY-NTB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0qa-av-Cyk">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp3-ld-4C6">
+                                <rect key="frame" x="12" y="44" width="45" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="2PL-dK-ZVB" eventType="touchUpInside" id="r3H-r9-mEg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DHl-oj-vF6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DHl-oj-vF6" firstAttribute="trailing" secondItem="0qa-av-Cyk" secondAttribute="trailing" id="GiG-e1-eTz"/>
+                            <constraint firstItem="0qa-av-Cyk" firstAttribute="top" secondItem="DHl-oj-vF6" secondAttribute="top" id="JwK-tz-OL6"/>
+                            <constraint firstItem="DHl-oj-vF6" firstAttribute="bottom" secondItem="0qa-av-Cyk" secondAttribute="bottom" id="O6q-kg-0wW"/>
+                            <constraint firstItem="0qa-av-Cyk" firstAttribute="leading" secondItem="DHl-oj-vF6" secondAttribute="leading" id="OGY-6i-Bno"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PhotosImage" destination="0qa-av-Cyk" id="brM-gI-nbe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJq-uv-0r8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3846" y="30"/>
+        </scene>
     </scenes>
     <color key="tintColor" name="purpletoDark"/>
     <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="purpletoDark">
             <color red="0.71700000762939453" green="0.10999999940395355" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

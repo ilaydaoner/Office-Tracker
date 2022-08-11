@@ -14,6 +14,7 @@
 		04ED8B7828A12BA2007A5A23 /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */; };
 		04ED8B7A28A12BE7007A5A23 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */; };
 		04ED8B7C28A12C0B007A5A23 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7B28A12C0B007A5A23 /* Extension.swift */; };
+		04ED8B7E28A3E95B007A5A23 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7D28A3E95B007A5A23 /* PhotosViewController.swift */; };
 		19E3D1BD2874C1AD005ED122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D1BC2874C1AD005ED122 /* AppDelegate.swift */; };
 		19E3D1BF2874C1AD005ED122 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */; };
 		19E3D1C12874C1AD005ED122 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D1C02874C1AD005ED122 /* LoginViewController.swift */; };
@@ -51,6 +52,7 @@
 		04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewController.swift; sourceTree = "<group>"; };
 		04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		04ED8B7B28A12C0B007A5A23 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		04ED8B7D28A3E95B007A5A23 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		19E3D1B92874C1AD005ED122 /* Office-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E3D1BC2874C1AD005ED122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04ED8B7F28A54B65007A5A23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04ED8B8028A54C9B007A5A23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04ED8B8128A54CB0007A5A23 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04ED8B7328A12B1F007A5A23 /* OfficeListScreen.swift */,
+				04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */,
+				04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */,
+				04ED8B7D28A3E95B007A5A23 /* PhotosViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		19E3D1B02874C1AD005ED122 = {
 			isa = PBXGroup;
 			children = (
@@ -122,11 +149,11 @@
 				19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */,
 				19E3D1C02874C1AD005ED122 /* LoginViewController.swift */,
 				043BA4982891BD9E000AA1DA /* RegisterViewController.swift */,
+				04ED8B7F28A54B65007A5A23 /* Models */,
 				04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */,
-				04ED8B7328A12B1F007A5A23 /* OfficeListScreen.swift */,
+				04ED8B8028A54C9B007A5A23 /* Cell */,
 				04ED8B7528A12B62007A5A23 /* OfficeCell.swift */,
-				04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */,
-				04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */,
+				04ED8B8128A54CB0007A5A23 /* Scenes */,
 				04ED8B7B28A12C0B007A5A23 /* Extension.swift */,
 				19E3D1C52874C1AD005ED122 /* Office_Tracker.xcdatamodeld */,
 				19E3D1C22874C1AD005ED122 /* Main.storyboard */,
@@ -299,6 +326,7 @@
 				043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */,
 				19E3D1BD2874C1AD005ED122 /* AppDelegate.swift in Sources */,
 				04ED8B7C28A12C0B007A5A23 /* Extension.swift in Sources */,
+				04ED8B7E28A3E95B007A5A23 /* PhotosViewController.swift in Sources */,
 				04ED8B7428A12B1F007A5A23 /* OfficeListScreen.swift in Sources */,
 				04ED8B7228A12AC3007A5A23 /* OfficeModels.swift in Sources */,
 				19E3D1C72874C1AD005ED122 /* Office_Tracker.xcdatamodeld in Sources */,
