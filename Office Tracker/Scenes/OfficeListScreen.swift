@@ -20,6 +20,10 @@ class OfficeListScreen: UIViewController {
            }
        }
    }
+    
+    var capacityOfOffices = [String]()
+    
+    var roomsOfOffices = [String]()
    
    override func viewDidLoad() {
        super.viewDidLoad()
@@ -27,6 +31,11 @@ class OfficeListScreen: UIViewController {
        tableView.dataSource = self
        get { (userData) in
            self.offices = userData
+           
+           for i in self.offices {
+               self.capacityOfOffices.append(i.capacity ?? "")
+               self.roomsOfOffices.append("\(i.rooms)" ?? "")
+           }
        }
    }
    
@@ -36,12 +45,25 @@ class OfficeListScreen: UIViewController {
            guard let data = data else { return }
            do {
                let userData = try JSONDecoder().decode(Array<Offices>.self, from: data)
+
+              
+               
                completion(userData)
            } catch {
                print("Error \(error)")
            }
        }.resume()
    }
+    
+    @IBAction func didTapScreen(_ sender: UIButton) {
+    let pickerVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PickerScreen") as! PickerViewController
+        
+        pickerVC.capacityFilter = capacityOfOffices
+        pickerVC.roomFilter = roomsOfOffices
+        navigationController?.pushViewController(pickerVC, animated: true)
+      
+    }
+    
 }
 
 
@@ -78,4 +100,5 @@ extension OfficeListScreen: UITableViewDataSource, UITableViewDelegate {
 //        self.present(detailVC, animated: true, completion: nil)
    }
 }
+
 

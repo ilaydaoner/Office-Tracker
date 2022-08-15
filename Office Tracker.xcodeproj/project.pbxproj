@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BA4982891BD9E000AA1DA /* RegisterViewController.swift */; };
+		04A54E9428AA327D00C5269B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A54E9328AA327D00C5269B /* PickerViewController.swift */; };
+		04B8B06628A5598400B11B64 /* OfficeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B06528A5598400B11B64 /* OfficeCell.swift */; };
 		04ED8B7228A12AC3007A5A23 /* OfficeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */; };
 		04ED8B7428A12B1F007A5A23 /* OfficeListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7328A12B1F007A5A23 /* OfficeListScreen.swift */; };
-		04ED8B7628A12B62007A5A23 /* OfficeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7528A12B62007A5A23 /* OfficeCell.swift */; };
 		04ED8B7828A12BA2007A5A23 /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */; };
 		04ED8B7A28A12BE7007A5A23 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */; };
 		04ED8B7C28A12C0B007A5A23 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7B28A12C0B007A5A23 /* Extension.swift */; };
@@ -46,9 +47,10 @@
 
 /* Begin PBXFileReference section */
 		043BA4982891BD9E000AA1DA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		04A54E9328AA327D00C5269B /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		04B8B06528A5598400B11B64 /* OfficeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeCell.swift; sourceTree = "<group>"; };
 		04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeModels.swift; sourceTree = "<group>"; };
 		04ED8B7328A12B1F007A5A23 /* OfficeListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeListScreen.swift; sourceTree = "<group>"; };
-		04ED8B7528A12B62007A5A23 /* OfficeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeCell.swift; sourceTree = "<group>"; };
 		04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewController.swift; sourceTree = "<group>"; };
 		04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		04ED8B7B28A12C0B007A5A23 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -96,18 +98,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A54E9228AA322700C5269B /* PickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04A54E9328AA327D00C5269B /* PickerViewController.swift */,
+			);
+			path = PickerViewController;
+			sourceTree = "<group>";
+		};
 		04ED8B7F28A54B65007A5A23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		04ED8B8028A54C9B007A5A23 /* Cell */ = {
+		04ED8B8028A54C9B007A5A23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04B8B06528A5598400B11B64 /* OfficeCell.swift */,
 			);
-			path = Cell;
+			path = View;
 			sourceTree = "<group>";
 		};
 		04ED8B8128A54CB0007A5A23 /* Scenes */ = {
@@ -119,6 +131,22 @@
 				04ED8B7D28A3E95B007A5A23 /* PhotosViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04ED8B8228A551E2007A5A23 /* Login View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19E3D1C02874C1AD005ED122 /* LoginViewController.swift */,
+			);
+			path = "Login View Controller";
+			sourceTree = "<group>";
+		};
+		04ED8B8328A551F8007A5A23 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				043BA4982891BD9E000AA1DA /* RegisterViewController.swift */,
+			);
+			path = RegisterViewController;
 			sourceTree = "<group>";
 		};
 		19E3D1B02874C1AD005ED122 = {
@@ -147,12 +175,11 @@
 			children = (
 				19E3D1BC2874C1AD005ED122 /* AppDelegate.swift */,
 				19E3D1BE2874C1AD005ED122 /* SceneDelegate.swift */,
-				19E3D1C02874C1AD005ED122 /* LoginViewController.swift */,
-				043BA4982891BD9E000AA1DA /* RegisterViewController.swift */,
+				04ED8B8228A551E2007A5A23 /* Login View Controller */,
+				04ED8B8328A551F8007A5A23 /* RegisterViewController */,
+				04A54E9228AA322700C5269B /* PickerViewController */,
 				04ED8B7F28A54B65007A5A23 /* Models */,
-				04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */,
-				04ED8B8028A54C9B007A5A23 /* Cell */,
-				04ED8B7528A12B62007A5A23 /* OfficeCell.swift */,
+				04ED8B8028A54C9B007A5A23 /* View */,
 				04ED8B8128A54CB0007A5A23 /* Scenes */,
 				04ED8B7B28A12C0B007A5A23 /* Extension.swift */,
 				19E3D1C52874C1AD005ED122 /* Office_Tracker.xcdatamodeld */,
@@ -324,14 +351,15 @@
 				19E3D1C12874C1AD005ED122 /* LoginViewController.swift in Sources */,
 				04ED8B7828A12BA2007A5A23 /* GridCollectionViewController.swift in Sources */,
 				043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */,
+				04A54E9428AA327D00C5269B /* PickerViewController.swift in Sources */,
 				19E3D1BD2874C1AD005ED122 /* AppDelegate.swift in Sources */,
 				04ED8B7C28A12C0B007A5A23 /* Extension.swift in Sources */,
 				04ED8B7E28A3E95B007A5A23 /* PhotosViewController.swift in Sources */,
 				04ED8B7428A12B1F007A5A23 /* OfficeListScreen.swift in Sources */,
+				04B8B06628A5598400B11B64 /* OfficeCell.swift in Sources */,
 				04ED8B7228A12AC3007A5A23 /* OfficeModels.swift in Sources */,
 				19E3D1C72874C1AD005ED122 /* Office_Tracker.xcdatamodeld in Sources */,
 				19E3D1BF2874C1AD005ED122 /* SceneDelegate.swift in Sources */,
-				04ED8B7628A12B62007A5A23 /* OfficeCell.swift in Sources */,
 				04ED8B7A28A12BE7007A5A23 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
