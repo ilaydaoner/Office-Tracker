@@ -496,11 +496,11 @@
             <objects>
                 <viewController id="gU9-n9-ckp" customClass="WebViewViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QUQ-Jq-SFw">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7K-kA-tPg">
-                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <rect key="frame" x="0.0" y="56" width="390" height="734"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -508,7 +508,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="DYv-2s-9mi">
-                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                                <rect key="frame" x="176.66666666666666" y="376.66666666666669" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WRJ-7n-sUS"/>
@@ -537,8 +537,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hm0-Xs-ikY" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KwC-lB-7ie"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oKw-aa-Dlg">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -625,11 +626,28 @@
                                             <action selector="addFavorite:" destination="BqO-UK-m7L" eventType="touchUpInside" id="g0z-QF-1tH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJ1-QV-xAO">
+                                        <rect key="frame" x="50" y="408.66666666666663" width="230" height="35.666666666666686"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="  Website">
+                                            <imageReference key="image" image="network" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="medium"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="hm0-Xs-ikY" kind="show" id="blb-RI-hmd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstItem="mJ1-QV-xAO" firstAttribute="leading" secondItem="dfG-qI-dLg" secondAttribute="leading" constant="50" id="1ST-2X-wvy"/>
                                     <constraint firstAttribute="bottom" secondItem="ES1-UW-Xfe" secondAttribute="bottom" constant="15" id="HUi-pG-3rk"/>
                                     <constraint firstAttribute="trailing" secondItem="ES1-UW-Xfe" secondAttribute="trailing" constant="50" id="QMc-zH-ekk"/>
+                                    <constraint firstAttribute="trailing" secondItem="mJ1-QV-xAO" secondAttribute="trailing" constant="50" id="Sxy-k5-9aX"/>
+                                    <constraint firstItem="ES1-UW-Xfe" firstAttribute="top" secondItem="mJ1-QV-xAO" secondAttribute="bottom" constant="5" id="Zsc-2U-jYY"/>
                                     <constraint firstItem="GcP-AT-YGe" firstAttribute="centerX" secondItem="dfG-qI-dLg" secondAttribute="centerX" id="gJk-zF-xMr"/>
                                     <constraint firstItem="ES1-UW-Xfe" firstAttribute="leading" secondItem="dfG-qI-dLg" secondAttribute="leading" constant="50" id="r7E-LE-4GF"/>
                                     <constraint firstItem="GcP-AT-YGe" firstAttribute="centerY" secondItem="dfG-qI-dLg" secondAttribute="centerY" id="z1s-fm-odB"/>
@@ -804,6 +822,7 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="network" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>

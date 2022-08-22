@@ -29,6 +29,7 @@ class OfficeListScreen: UIViewController {
        super.viewDidLoad()
        tableView.delegate = self
        tableView.dataSource = self
+       tableView.rowHeight = 80
        get { (userData) in
            self.offices = userData
            
