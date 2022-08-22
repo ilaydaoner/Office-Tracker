@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BA4982891BD9E000AA1DA /* RegisterViewController.swift */; };
+		047AC22528B260AA000498B5 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC22428B260AA000498B5 /* WebViewViewController.swift */; };
+		047AC24B28B36425000498B5 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC24A28B36425000498B5 /* FavoriteViewController.swift */; };
 		04A54E9428AA327D00C5269B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A54E9328AA327D00C5269B /* PickerViewController.swift */; };
 		04B8B06628A5598400B11B64 /* OfficeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8B06528A5598400B11B64 /* OfficeCell.swift */; };
 		04ED8B7228A12AC3007A5A23 /* OfficeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		043BA4982891BD9E000AA1DA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		047AC22428B260AA000498B5 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		047AC24A28B36425000498B5 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		04A54E9328AA327D00C5269B /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		04B8B06528A5598400B11B64 /* OfficeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeCell.swift; sourceTree = "<group>"; };
 		04ED8B7128A12AC3007A5A23 /* OfficeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeModels.swift; sourceTree = "<group>"; };
@@ -98,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047AC22628B260B2000498B5 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				047AC22428B260AA000498B5 /* WebViewViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		04A54E9228AA322700C5269B /* PickerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 				04ED8B7928A12BE6007A5A23 /* DetailsViewController.swift */,
 				04ED8B7728A12BA1007A5A23 /* GridCollectionViewController.swift */,
 				04ED8B7D28A3E95B007A5A23 /* PhotosViewController.swift */,
+				047AC24A28B36425000498B5 /* FavoriteViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -182,6 +195,7 @@
 				04ED8B8028A54C9B007A5A23 /* View */,
 				04ED8B8128A54CB0007A5A23 /* Scenes */,
 				04ED8B7B28A12C0B007A5A23 /* Extension.swift */,
+				047AC22628B260B2000498B5 /* WebView */,
 				19E3D1C52874C1AD005ED122 /* Office_Tracker.xcdatamodeld */,
 				19E3D1C22874C1AD005ED122 /* Main.storyboard */,
 				19E3D1C82874C1B0005ED122 /* Assets.xcassets */,
@@ -348,9 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047AC22528B260AA000498B5 /* WebViewViewController.swift in Sources */,
 				19E3D1C12874C1AD005ED122 /* LoginViewController.swift in Sources */,
 				04ED8B7828A12BA2007A5A23 /* GridCollectionViewController.swift in Sources */,
 				043BA4992891BD9F000AA1DA /* RegisterViewController.swift in Sources */,
+				047AC24B28B36425000498B5 /* FavoriteViewController.swift in Sources */,
 				04A54E9428AA327D00C5269B /* PickerViewController.swift in Sources */,
 				19E3D1BD2874C1AD005ED122 /* AppDelegate.swift in Sources */,
 				04ED8B7C28A12C0B007A5A23 /* Extension.swift in Sources */,
