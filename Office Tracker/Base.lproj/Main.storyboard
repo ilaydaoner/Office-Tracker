@@ -199,6 +199,12 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRi-dH-chg">
+                                <rect key="frame" x="162" y="696" width="67" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cSa-ZM-1fR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -245,7 +251,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys1-Od-fIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nsk-7w-QWV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-341"/>
+            <point key="canvasLocation" x="824.61538461538464" y="-341.23222748815164"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="X2S-6E-mB5">
@@ -412,7 +418,7 @@
         <!--Ofisler-->
         <scene sceneID="F0z-eq-H0B">
             <objects>
-                <viewController id="11u-tN-4P7" customClass="OfficeListScreen" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OfficeListScreen" id="11u-tN-4P7" customClass="OfficeListScreen" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15R-BO-eMx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,7 +536,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5p-Dg-J3a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="575"/>
+            <point key="canvasLocation" x="2495" y="559"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="SZv-j6-O1j">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="xo2-Oi-FeF" customClass="MapViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tmz-vi-P5v">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UaT-Db-SFe">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jqU-kw-Gut"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UaT-Db-SFe" firstAttribute="leading" secondItem="jqU-kw-Gut" secondAttribute="leading" id="FoG-Jr-los"/>
+                            <constraint firstItem="jqU-kw-Gut" firstAttribute="bottom" secondItem="UaT-Db-SFe" secondAttribute="bottom" id="I6G-cC-zJx"/>
+                            <constraint firstItem="UaT-Db-SFe" firstAttribute="top" secondItem="jqU-kw-Gut" secondAttribute="top" id="b5y-6O-aYs"/>
+                            <constraint firstItem="jqU-kw-Gut" firstAttribute="trailing" secondItem="UaT-Db-SFe" secondAttribute="trailing" id="kPX-Ka-mDX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fFB-Uf-8pa"/>
+                    <connections>
+                        <outlet property="mapView" destination="UaT-Db-SFe" id="xy5-vP-f8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGQ-pZ-s7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="424"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUm-hM-ITQ">
@@ -640,14 +676,31 @@
                                             <segue destination="hm0-Xs-ikY" kind="show" id="blb-RI-hmd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-12-yjk">
+                                        <rect key="frame" x="50" y="368" width="230" height="35.666666666666686"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=" Video">
+                                            <imageReference key="image" image="play" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="medium"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="QEt-Z6-a1l" kind="show" id="XQM-b9-tmz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="mJ1-QV-xAO" firstAttribute="leading" secondItem="dfG-qI-dLg" secondAttribute="leading" constant="50" id="1ST-2X-wvy"/>
                                     <constraint firstAttribute="bottom" secondItem="ES1-UW-Xfe" secondAttribute="bottom" constant="15" id="HUi-pG-3rk"/>
+                                    <constraint firstItem="mJ1-QV-xAO" firstAttribute="top" secondItem="Pdr-12-yjk" secondAttribute="bottom" constant="5" id="Kyc-bc-clU"/>
                                     <constraint firstAttribute="trailing" secondItem="ES1-UW-Xfe" secondAttribute="trailing" constant="50" id="QMc-zH-ekk"/>
                                     <constraint firstAttribute="trailing" secondItem="mJ1-QV-xAO" secondAttribute="trailing" constant="50" id="Sxy-k5-9aX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pdr-12-yjk" secondAttribute="trailing" constant="50" id="TzI-iE-K5e"/>
                                     <constraint firstItem="ES1-UW-Xfe" firstAttribute="top" secondItem="mJ1-QV-xAO" secondAttribute="bottom" constant="5" id="Zsc-2U-jYY"/>
+                                    <constraint firstItem="Pdr-12-yjk" firstAttribute="leading" secondItem="dfG-qI-dLg" secondAttribute="leading" constant="50" id="g4O-qP-Drg"/>
                                     <constraint firstItem="GcP-AT-YGe" firstAttribute="centerX" secondItem="dfG-qI-dLg" secondAttribute="centerX" id="gJk-zF-xMr"/>
                                     <constraint firstItem="ES1-UW-Xfe" firstAttribute="leading" secondItem="dfG-qI-dLg" secondAttribute="leading" constant="50" id="r7E-LE-4GF"/>
                                     <constraint firstItem="GcP-AT-YGe" firstAttribute="centerY" secondItem="dfG-qI-dLg" secondAttribute="centerY" id="z1s-fm-odB"/>
@@ -794,6 +847,58 @@
             </objects>
             <point key="canvasLocation" x="-894" y="392"/>
         </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="7VO-n6-iyd">
+            <objects>
+                <viewController id="QEt-Z6-a1l" customClass="MovieViewController" customModule="Office_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ke7-5s-rUK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9g-lC-XKk">
+                                <rect key="frame" x="20" y="130" width="350" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="WOf-ye-dct"/>
+                                    <constraint firstAttribute="width" constant="350" id="nWd-mp-oEw"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-2p-Mws">
+                                <rect key="frame" x="145" y="390" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fBU-ML-CpU"/>
+                                    <constraint firstAttribute="width" constant="100" id="hL0-Yd-ywp"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                <connections>
+                                    <action selector="playPauseVideo:" destination="QEt-Z6-a1l" eventType="touchUpInside" id="LOB-y2-qn3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uYE-hd-wfi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uYE-hd-wfi" firstAttribute="trailing" secondItem="O9g-lC-XKk" secondAttribute="trailing" constant="20" id="B5b-Qt-De6"/>
+                            <constraint firstItem="uYE-hd-wfi" firstAttribute="trailing" secondItem="Bj1-2p-Mws" secondAttribute="trailing" constant="145" id="CSr-9h-60l"/>
+                            <constraint firstItem="Bj1-2p-Mws" firstAttribute="centerX" secondItem="Ke7-5s-rUK" secondAttribute="centerX" id="V7Q-hB-E5w"/>
+                            <constraint firstItem="Bj1-2p-Mws" firstAttribute="leading" secondItem="uYE-hd-wfi" secondAttribute="leading" constant="145" id="Vdu-TB-7El"/>
+                            <constraint firstItem="O9g-lC-XKk" firstAttribute="leading" secondItem="uYE-hd-wfi" secondAttribute="leading" constant="20" id="k1I-uK-19r"/>
+                            <constraint firstItem="Bj1-2p-Mws" firstAttribute="top" secondItem="O9g-lC-XKk" secondAttribute="bottom" constant="10" id="oYU-VF-Bhe"/>
+                            <constraint firstItem="O9g-lC-XKk" firstAttribute="top" secondItem="Ke7-5s-rUK" secondAttribute="top" constant="130" id="ogT-P4-hok"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vuH-2h-kKe"/>
+                    <connections>
+                        <outlet property="playPauseButton" destination="Bj1-2p-Mws" id="u8L-Pv-0PV"/>
+                        <outlet property="videContentView" destination="O9g-lC-XKk" id="dTh-gE-IFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgx-50-nc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112.30769230769231" y="408.76777251184831"/>
+        </scene>
         <!--Favoriler-->
         <scene sceneID="eDy-15-tXC">
             <objects>
@@ -823,6 +928,7 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
         <image name="network" catalog="system" width="128" height="121"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>

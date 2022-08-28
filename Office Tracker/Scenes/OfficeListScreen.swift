@@ -20,7 +20,6 @@ class OfficeListScreen: UIViewController {
            }
        }
    }
-    
     var capacityOfOffices = [String]()
     
     var roomsOfOffices = [String]()
@@ -63,6 +62,9 @@ class OfficeListScreen: UIViewController {
         pickerVC.roomFilter = roomsOfOffices
         navigationController?.pushViewController(pickerVC, animated: true)
       
+    }
+   
+    @IBAction func mapButton(_ sender: UIButton) {
     }
     
 }
